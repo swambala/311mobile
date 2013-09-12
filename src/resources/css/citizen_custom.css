@@ -1,0 +1,137 @@
+.info-panel {
+color: #666;
+line-height: 1.45em;
+margin-top:10px;
+margin-left:10px;
+margin-right:10px;
+margin-bottom:5px;
+padding: 5px;
+}
+
+.info-panel h2 {
+	font-size: 90%;
+	font-weight: bold;
+	color: #666;	
+}
+
+.info-panel h3 {
+	font-size: 70%;
+	font-weight: normal;
+	color: #0098C3;
+}
+.list-item-line1 {
+	font-weight: normal;
+	font-size: 90%;
+	color: #666;
+}
+
+.list-item-line1 {
+	font-weight: normal;
+	font-size: 90%;
+	color: #666;
+}
+
+.list-item-line1-bold {
+	font-weight: bold;
+	font-size: 90%;
+	color: #666;
+}
+.list-item-line2 {
+	font-weight: normal;
+	font-size: 70%;
+	color: #666;
+}
+
+.list-item-line3 {
+	font-weight: normal;
+	font-size: 70%;
+	color: #0098C3;
+}
+
+.list-item-blue {
+	font-weight: normal;
+	color: #0098C3;
+}
+
+.boxlist {
+	margin: 2px;
+	padding: 2px;
+	border: 1px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	background-color: #fff;
+	-webkit-border-radius:15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.citizen-list .x-list-item-body{
+	height:55px;
+}
+.x-toolbar .x-toolbar-title {
+    color: #5a3d23;
+	font-size: 80%;
+}
+
+.citizen-list .x-list-header {
+	background-color: #0098C3;
+    background-image: none;
+    color: beige;	
+
+} 
+.newTicketPic{
+	background-image: -webkit-linear-gradient(top, #555555, #555555 50%, #555555 51%, #555555);
+	color:#ffffff;
+	background-color: #555555;
+	padding-top: 1em;
+	padding-bottom: 0px;
+	padding-left: 1em;
+	padding-right: 1em;
+	background-image: -webkit-linear-gradient(top, #555555, #555555 50%, #555555 51%, #555555);
+	border: 0px solid #555555;
+}
+.x-button.x-button-pressing, .x-button.x-button-pressing:after, .x-button.x-button-pressed, .x-button.x-button-pressed:after, .x-button.x-button-active, .x-button.x-button-active:after, .x-toolbar .x-button.x-button-pressing, .x-toolbar .x-button.x-button-pressing:after, .x-toolbar .x-button.x-button-pressed, .x-toolbar .x-button.x-button-pressed:after, .x-toolbar .x-button.x-button-active, .x-toolbar .x-button.x-button-active:after {
+	background-color: #555555;
+	background-image: -webkit-linear-gradient(top, #555555, #555555 50%, #555555 51%, #555555);
+}
+.x-list-grouped .x-list-header-wrap .x-list-header,.x-list-normal .x-list-header-wrap .x-item-header, .x-margin:5;
+}
+.x-list-normal .x-list-item.x-item-selected .x-dock-horizontal,.x-list .x-list-item.x-item-pressed .x-dock-horizontal{
+	
+}
+.list-item-narrative ,.ticketsDetailsContent{
+	padding-left: 10px;
+	font-weight: normal;
+	font-size: 80%;
+	color: #666;
+}
+.x-list .x-list-disclosure {
+	background-image: -webkit-linear-gradient(top, #4D4D4D, #4D4D4D 50%, #4D4D4D 51%, #4D4D4D);
+}
+.list-item-title
+{
+	padding-left: 10px;
+	font-size:80%;
+}
+.ticketsDetailsTitle
+{
+	font-size:80%;
+	
+}
+.x-form .x-scroll-container > .x-inner {
+	padding-top: 0.1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+}
+.x-field .x-field-input, .x-field .x-input-el{
+	border-radius: 25px;
+}
+.x-input-el {
+	text-overflow: ellipsis;
+	
+}
+.x-form-label {
+background-color: #555555;
+color: #ffffff;
+font-size: 1em;
+font-weight: normal;
+}
