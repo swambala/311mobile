@@ -6,10 +6,11 @@ Ext.define("App.store.Tickets", {
         proxy: {
 			type: "ajax",
 			api: {
-				create: localhost_path+"Tickets.php?action=create&jurisdiction_id="+jurisdiction_id,
-				read: localhost_path+"Tickets.php?jurisdiction_id="+jurisdiction_id,
-				update: localhost_path+"Tickets.php?action=update&jurisdiction_id="+jurisdiction_id,
-				destroy: localhost_path+"Tickets.php?action=delete&jurisdiction_id="+jurisdiction_id
+           read:"http://23.23.193.45/getTickets?jurisdiction_id="+jurisdiction_id,
+                //create: localhost_path+"Tickets.php?action=create&jurisdiction_id="+jurisdiction_id,
+				//read: localhost_path+"Tickets.php?jurisdiction_id="+jurisdiction_id,
+				//update: localhost_path+"Tickets.php?action=update&jurisdiction_id="+jurisdiction_id,
+				//destroy: localhost_path+"Tickets.php?action=delete&jurisdiction_id="+jurisdiction_id
 			},
 			extraParams: {
 				keyword: ""

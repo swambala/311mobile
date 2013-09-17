@@ -255,7 +255,7 @@ Ext.define("App.controller.Tickets", {
     onSaveTicketCommand: function () {
 		myMask = new Ext.LoadMask(Ext.getBody(), {message:"Saving Tickets..."});
 		myMask.show();
-		timeout = setTimeout(App.app.onHideMask, 2500);    
+		//timeout = setTimeout(App.app.onHideMask, 8000);
         var ticketNewEditorView = this.getTicketNewEditorView();
         var currentTicket = ticketNewEditorView.getRecord();
 		var newValues = Ext.getCmp('newTicketForm').getValues();
@@ -286,8 +286,9 @@ Ext.define("App.controller.Tickets", {
 				//ticketsStore.add(currentTicket);				
 				
 				Ext.Ajax.request({
-					url: localhost_path+"Tickets.php?action=create&jurisdiction_id="+jurisdiction_id,
-					method: 'POST',
+					//url: localhost_path+"Tickets.php?action=create&jurisdiction_id="+jurisdiction_id,
+                    url:"http://23.23.193.45/postTicket?api_key=dc189c48f1047585aecd09333a597b7a&jurisdiction_id="+jurisdiction_id,
+                    method: 'POST',
 					params: 
 					{
 						service_code : currentTicket.data.service_code,
@@ -301,15 +302,18 @@ Ext.define("App.controller.Tickets", {
 						device_id : currentTicket.data.device_id
 					},
 					success: function(result) {
-						var jsonData = Ext.JSON.decode(result.responseText);
-						if(jsonData["message"][0].token != undefined && jsonData["message"][0].token != '') {             
-                            App.app.activateThanksPageContainer();
+                        myMask.hide();
+                        var jsonData = Ext.JSON.decode(result.responseText);
+                        //if(jsonData["message"][0].token != undefined && jsonData["message"][0].token != '') {
+                        if(jsonData[0].token != undefined && jsonData[0].token != '') {
+                                 App.app.activateThanksPageContainer();
 						}else {
 							Ext.Msg.alert('Error', 'There is some unexpected error arrived..Please try again later..', Ext.emptyFn);
 						}
 					},
 					failure: function(result) {
 						Ext.Msg.alert('Error', 'Please try again later..', Ext.emptyFn);
+                        myMask.hide();
 					}
 				});
 			}

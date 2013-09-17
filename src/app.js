@@ -114,16 +114,7 @@ Ext.application({
 		this.getController('Tickets').activateTicketsDetailsCommand(recordId);		
 	},
 	activateThanksPageContainer: function() {
-		var ticketsStore = Ext.getStore("Tickets");
-		ticketsStore.sync();
-		if(App.app.setCitizenParams.nearBy){
-			ticketsStore.load({
-				params:{sortBy: 'nearBy',latitude:App.app.setCitizenParams.latitude,longitude:App.app.setCitizenParams.longitude}
-			});
-		}else{
-			ticketsStore.load({params:{device_id:device.uuid}});
-		}
-		var thanksPageContainer = Ext.create('App.view.ThanksPage');
+        var thanksPageContainer = Ext.create('App.view.ThanksPage');
 		Ext.Viewport.add(thanksPageContainer);
 		Ext.Viewport.animateActiveItem(thanksPageContainer, App.app.slideLeftTransition);
 	},

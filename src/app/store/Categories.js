@@ -7,8 +7,9 @@ Ext.define("App.store.Categories",{
 		model: "App.model.Category",
 		proxy: {
 			type: "ajax",
-			url: localhost_path+"CategoriesList.php",
-			reader: {
+			//url: localhost_path+"CategoriesList.php",
+           url: "http://23.23.193.45/getCategories",
+           reader: {
 				type: "json",
 				rootProperty: "categories"
 			}
